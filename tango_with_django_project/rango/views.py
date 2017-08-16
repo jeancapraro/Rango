@@ -14,9 +14,6 @@ def index(request):
     return render(request, 'rango/index.html', context_dict)
 
 def about(request):
-    pagina = '''
-    <strong>Sobre o Rango</strong> </br>
 
-    <a href='/rango/'>Home</a>
-    '''
-    return HttpResponse(pagina)
+    return render(request, 'rango/about.html', {'autor':'Marco André Mendes'})
+
